@@ -1,0 +1,7 @@
+<p id="notice"><%= notice %></p>
+<h1><%= @festival.name %></h1>
+<h3><%= @festival.city %></h3>
+
+<%= link_to 'Add Lineup', new_festival_lineup_path(@festival) %>
+<%= link_to 'Edit', edit_festival_path(@festival) %> |
+<%= link_to 'Back', festivals_path %>

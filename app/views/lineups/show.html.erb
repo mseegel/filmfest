@@ -1,0 +1,8 @@
+<p id="notice"><%= notice %></p>
+
+<% @festival.lineups.each do |l| %>
+		<%= l.film.name %><br />
+<% end %>
+
+<%= link_to 'Edit', edit_lineup_path(@lineup) %> |
+<%= link_to 'Back', lineups_path %>
