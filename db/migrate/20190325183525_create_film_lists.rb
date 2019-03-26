@@ -1,0 +1,8 @@
+class CreateFilmLists < ActiveRecord::Migration[5.2]
+  def change
+    create_table :film_lists do |t|
+      t.integer :film_id
+      t.timestamps
+    end
+  end
+end

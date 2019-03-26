@@ -10,11 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_16_112749) do
+ActiveRecord::Schema.define(version: 2019_03_25_183525) do
 
   create_table "festivals", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.string "city"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "film_lists", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "film_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -29,7 +35,6 @@ ActiveRecord::Schema.define(version: 2019_03_16_112749) do
   create_table "lineups", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "year"
     t.integer "festival_id"
-    t.integer "film_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

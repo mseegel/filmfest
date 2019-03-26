@@ -1,4 +1,4 @@
 class Lineup < ApplicationRecord
 	belongs_to :festival
-	belongs_to :film
+	has_many :film_lists
 end

@@ -3,7 +3,6 @@ class CreateLineups < ActiveRecord::Migration[5.2]
     create_table :lineups do |t|
       t.integer :year
       t.integer :festival_id
-      t.integer :film_id
       t.timestamps
     end
   end
